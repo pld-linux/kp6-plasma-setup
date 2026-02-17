@@ -10,7 +10,7 @@ Name:		kp6-%{kpname}
 Version:	6.6.0
 Release:	1
 License:	LGPL v2.1+
-Group:		X11/Libraries
+Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
 # Source0-md5:	b08f6455ba7b3ebdcef9b7cb12f2df11
 URL:		http://www.kde.org/
@@ -85,8 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/system-services/org.kde.plasmasetup.service
 %{_datadir}/dbus-1/system.d/org.kde.plasmasetup.conf
 %{_datadir}/metainfo/org.kde.plasmasetup.keyboard.appdata.xml
-%{_datadir}/plasma-setup/kglobalaccelrc
-%{_datadir}/plasma-setup/plasma-setup.desktop
+%{_datadir}/plasma-setup
 %{_datadir}/plasma/packages/org.kde.plasmasetup.account
 %{_datadir}/plasma/packages/org.kde.plasmasetup.finished
 %{_datadir}/plasma/packages/org.kde.plasmasetup.hostname
