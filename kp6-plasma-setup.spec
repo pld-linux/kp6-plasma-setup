@@ -8,7 +8,7 @@
 Summary:	Plasma Setup
 Name:		kp6-%{kpname}
 Version:	6.6.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -19,7 +19,12 @@ BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
 BuildRequires:	gettext-tools
 BuildRequires:	kf6-extra-cmake-modules >= 6.22.0
+BuildRequires:	kf6-kauth-devel >= 6.22.0
+BuildRequires:	kf6-kconfig-devel >= 6.22.0
+BuildRequires:	kf6-ki18n-devel >= 6.22.0
+BuildRequires:	kf6-kpackage-devel >= 6.22.0
 BuildRequires:	kp6-libkscreen-devel
+BuildRequires:	kp6-plasma-desktop
 BuildRequires:	kp6-plasma-workspace-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
