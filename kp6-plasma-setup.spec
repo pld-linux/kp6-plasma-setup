@@ -8,7 +8,7 @@
 Summary:	Plasma Setup
 Name:		kp6-%{kpname}
 Version:	6.6.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -51,7 +51,9 @@ settings.
 	-G Ninja \
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-	-DKDE_INSTALL_DOCBUNDLEDIR=%{_kdedocdir}
+	-DKDE_INSTALL_DOCBUNDLEDIR=%{_kdedocdir} \
+	-DKDE_INSTALL_SYSTEMDUNITDIR="/lib/systemd"
+
 %ninja_build -C build
 
 %if %{with tests}
@@ -78,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kpname}.lang
 %defattr(644,root,root,755)
 /etc/xdg/plasmasetuprc
-%{_prefix}%{systemdunitdir}/plasma-setup.service
+%{systemdunitdir}/plasma-setup.service
 %{_prefix}/lib/sysusers.d/plasma-setup-sysuser.conf
 %{systemdtmpfilesdir}/plasma-setup-tmpfiles.conf
 %{_libdir}/libcomponentspluginplugin.a
