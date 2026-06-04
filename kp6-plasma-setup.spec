@@ -43,6 +43,11 @@ installation or when starting up a new computer. Guides the user in
 creating the system's first user account and configuring initial
 settings.
 
+%description -l pl.UTF-8
+Doświadczenie prosto-z-pudełka, które wita Cię po instalacji lub gdy
+startujesz nowy komputer. Prowadzi użytkownika przy zakładaniu
+pierwszego konta i pierwszej konfiguracji systemu.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
